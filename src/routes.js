@@ -47,72 +47,109 @@ import SignUp from "layouts/authentication/sign-up";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
+import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import ChatbotIcon from "@mui/icons-material/MarkUnreadChatAlt";
+import HerbsIcon from "@mui/icons-material/LocalFlorist";
+import SocialNetworkIcon from "@mui/icons-material/Diversity3";
+
+const iconMapping = {
+  Dashboard: <DashboardIcon fontSize="small" />,
+  "Chatbot Service": <ChatbotIcon fontSize="small" />,
+  "Doctors Service": <HealthAndSafetyIcon fontSize="small" />,
+  "Herbs Service": <HerbsIcon fontSize="small" />,
+  "Social Network": <SocialNetworkIcon fontSize="small" />,
+};
 
 const routes = [
   {
     type: "collapse",
     name: "Dashboard",
     key: "dashboard",
-    icon: <Icon fontSize="small">dashboard</Icon>,
+    icon: iconMapping["Dashboard"],
     route: "/dashboard",
     component: <Dashboard />,
   },
   {
     type: "collapse",
-    name: "Tables",
-    key: "tables",
-    icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/tables",
-    component: <Tables />,
+    name: "Chatbot Service",
+    key: "chatbot",
+    icon: iconMapping["Chatbot Service"],
+    route: "/chatbot",
+    component: <Dashboard />,
   },
   {
     type: "collapse",
-    name: "Billing",
-    key: "billing",
-    icon: <Icon fontSize="small">receipt_long</Icon>,
-    route: "/billing",
-    component: <Billing />,
+    name: "Doctors Service",
+    key: "doctors",
+    icon: iconMapping["Doctors Service"],
+    route: "/doctors",
+    component: <Dashboard />,
   },
   {
     type: "collapse",
-    name: "RTL",
-    key: "rtl",
-    icon: <Icon fontSize="small">format_textdirection_r_to_l</Icon>,
-    route: "/rtl",
-    component: <RTL />,
+    name: "Herbs Service",
+    key: "herb",
+    icon: iconMapping["Herbs Service"],
+    route: "/herb",
+    component: <Dashboard />,
   },
   {
     type: "collapse",
-    name: "Notifications",
-    key: "notifications",
-    icon: <Icon fontSize="small">notifications</Icon>,
-    route: "/notifications",
-    component: <Notifications />,
-  },
-  {
-    type: "collapse",
-    name: "Profile",
-    key: "profile",
-    icon: <Icon fontSize="small">person</Icon>,
+    name: "Social Network",
+    key: "socialNetwork",
+    icon: iconMapping["Social Network"],
     route: "/profile",
     component: <Profile />,
   },
-  {
-    type: "collapse",
-    name: "Sign In",
-    key: "sign-in",
-    icon: <Icon fontSize="small">login</Icon>,
-    route: "/authentication/sign-in",
-    component: <SignIn />,
-  },
-  {
-    type: "collapse",
-    name: "Sign Up",
-    key: "sign-up",
-    icon: <Icon fontSize="small">assignment</Icon>,
-    route: "/authentication/sign-up",
-    component: <SignUp />,
-  },
+  // {
+  //   type: "collapse",
+  //   name: "Sign In",
+  //   key: "sign-in",
+  //   icon: <Icon fontSize="small">login</Icon>,
+  //   route: "/authentication/sign-in",
+  //   component: <SignIn />,
+  // },
+  // {
+  //   type: "collapse",
+  //   name: "Sign Up",
+  //   key: "sign-up",
+  //   icon: <Icon fontSize="small">assignment</Icon>,
+  //   route: "/authentication/sign-up",
+  //   component: <SignUp />,
+  // },
+  // {
+  //   type: "collapse",
+  //   name: "Billing",
+  //   key: "billing",
+  //   icon: <Icon fontSize="small">receipt_long</Icon>,
+  //   route: "/billing",
+  //   component: <Billing />,
+  // },
+  // {
+  //   type: "collapse",
+  //   name: "RTL",
+  //   key: "rtl",
+  //   icon: <Icon fontSize="small">format_textdirection_r_to_l</Icon>,
+  //   route: "/rtl",
+  //   component: <RTL />,
+  // },
+  // {
+  //   type: "collapse",
+  //   name: "Notifications",
+  //   key: "notifications",
+  //   icon: <Icon fontSize="small">notifications</Icon>,
+  //   route: "/notifications",
+  //   component: <Notifications />,
+  // },
+  // {
+  //   type: "collapse",
+  //   name: "Tables",
+  //   key: "tables",
+  //   icon: <Icon fontSize="small">table_view</Icon>,
+  //   route: "/tables",
+  //   component: <Tables />,
+  // },
 ];
 
 export default routes;
