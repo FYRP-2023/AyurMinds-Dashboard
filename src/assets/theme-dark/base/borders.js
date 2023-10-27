@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 React - v2.2.0
+* Ayur Minds React - v2.2.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-react
@@ -14,15 +14,15 @@ Coded by www.creative-tim.com
 */
 
 /**
- * The base border styles for the Material Dashboard 2 React.
+ * The base border styles for the Ayur Minds React.
  * You can add new border width, border color or border radius using this file.
- * You can customized the borders value for the entire Material Dashboard 2 React using thie file.
+ * You can customized the borders value for the entire Ayur Minds React using thie file.
  */
 
-// Material Dashboard 2 React Base Styles
+// Ayur Minds React Base Styles
 import colors from "assets/theme-dark/base/colors";
 
-// Material Dashboard 2 React Helper Functions
+// Ayur Minds React Helper Functions
 import pxToRem from "assets/theme-dark/functions/pxToRem";
 import rgba from "assets/theme-dark/functions/rgba";
 

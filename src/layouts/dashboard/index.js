@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Dashboard 2 React - v2.2.0
+* Ayur Minds React - v2.2.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-dashboard-react
@@ -16,10 +16,10 @@ Coded by www.creative-tim.com
 // @mui material components
 import Grid from "@mui/material/Grid";
 
-// Material Dashboard 2 React components
+// Ayur Minds React components
 import MDBox from "components/MDBox";
 
-// Material Dashboard 2 React example components
+// Ayur Minds React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
@@ -34,9 +34,20 @@ import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 // Dashboard components
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
+import { useEffect } from "react";
 
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;
+
+  useEffect(() => {
+    // Access query parameters from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const username = urlParams.get("username");
+    const email = urlParams.get("email");
+
+    console.log("Username:", username);
+    console.log("Email:", email);
+  }, []);
 
   return (
     <DashboardLayout>
